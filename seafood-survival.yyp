@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "29874404-61cd-4d6e-bb51-51d499bb1a90",
+            "Value": {
+                "id": "c6a601e5-94ca-422d-bab5-4f8afd41e871",
+                "resourcePath": "objects\\objFishSpawner\\objFishSpawner.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2e518f4e-e45d-4a26-a57e-0c0547cf2e97",
             "Value": {
                 "id": "00df8ee6-7865-4b66-9d99-02ad733971e1",
@@ -227,6 +235,14 @@
             "Value": {
                 "id": "769bba55-6648-4eb3-80ea-47dcea216c3b",
                 "resourcePath": "sprites\\sprChef\\sprChef.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6712ac80-4528-44c2-a4e5-3312f6326e5e",
+            "Value": {
+                "id": "98f1d5be-8cff-4238-986e-c71cfb063329",
+                "resourcePath": "sprites\\sprExclamation\\sprExclamation.yy",
                 "resourceType": "GMSprite"
             }
         },

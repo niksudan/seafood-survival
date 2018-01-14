@@ -7,7 +7,10 @@ if (!surface_exists(oceanSurface)) {
 surface_set_target(oceanSurface);
 	draw_clear_alpha(c_black, 0);
 	with (objFishPatch) {
-		draw_sprite_ext(sprFish, 0, x, y, 1, 1, direction, c_white, 1);
+		draw_sprite_ext(sprFish, 0, x, y, 1, 1, direction, c_white, image_alpha);
+		if (isBiting) {
+			draw_sprite(sprExclamation, 0, x, y - 8);	
+		}
 	}
 surface_reset_target();
 
