@@ -8,9 +8,6 @@ surface_set_target(oceanSurface);
 	draw_clear_alpha(c_black, 0);
 	with (objFishPatch) {
 		draw_sprite_ext(sprFish, 0, x, y, 1, 1, direction, c_white, image_alpha);
-		if (isBiting) {
-			draw_sprite(sprExclamation, 0, x, y - 8);	
-		}
 	}
 surface_reset_target();
 
@@ -38,5 +35,10 @@ surface_set_target(gameSurface);
 	}
 	with (person) {
 		person_render();
+	}
+	with (objFishPatch) {
+		if (isBiting) {
+			draw_sprite(sprExclamation, 0, x, y - 8);	
+		}
 	}
 surface_reset_target();

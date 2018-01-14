@@ -15,7 +15,8 @@ if (isReeling) {
 			didSplash = true;
 			instance_create_depth(xTarget, yTarget, -1, objSplashBig);
 		} else {
-			isReeling = true;	
+			isReeling = true;
+			jolt_rod();
 		}
 	}
 	if (distance_to_point(objPlayer.rodX, objPlayer.rodY) > 64) {

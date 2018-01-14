@@ -24,6 +24,7 @@ if (canBite) {
 	if (biteTimer <= 0) {
 		biteTimer = biteDelay;
 		numberOfBites -= 1;
+		jolt_rod();
 		
 		// Left it too long
 		if (isBiting) {
@@ -35,6 +36,7 @@ if (canBite) {
 			isBiting = true;
 		} else {
 			instance_create_depth(x, y, -1, objSplashSmall);	
+			speed -= 0.1;
 		}
 	}
 }
@@ -54,7 +56,7 @@ if (isSpooked) {
 } else if (isInterested) {
 	if (instance_exists(objBobber) && !objBobber.isReeling) {
 		targetDirection = point_direction(x, y, objBobber.x, objBobber.y);
-		if (distance_to_object(objBobber) < 4) {
+		if (distance_to_object(objBobber) < 2) {
 			canBite = true;
 			targetSpeed = 0;
 		} else {

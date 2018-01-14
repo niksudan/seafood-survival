@@ -22,11 +22,12 @@ if (didClick) {
 	// Drop fish
 	if (hasFish) {
 		hasFish = false;
+		jolt_rod();
 		
 	// Cast
 	} else if (!isUsingRod) {
 		isUsingRod = true;
-		p_bodyDir += choose(1, -1) * random_range(10, 20);
+		jolt_rod();
 		with (objBobber) {
 			instance_destroy();
 		}
