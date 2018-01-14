@@ -37,7 +37,7 @@ if (gameWin || gameStart) {
 		text = "Chef whipped up the finest cuisine\n" +
 		"That you had possibly ever seen\n\n" +
 		"You ate it all, and enjoyed every bite\n" +
-		"But the natives killed you during the night!"
+		"But the natives killed you during the night..."
 	} else {
 		text = "\n\n" +
 		"A game by Nik Sudan\nMade for GM48 #25\n\n\n" +
