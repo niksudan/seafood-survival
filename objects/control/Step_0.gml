@@ -57,3 +57,14 @@ surface_set_target(gameSurface);
 		draw_text(objChef.x, objChef.y - 40, string(fishCount) + " / 6");
 	}
 surface_reset_target();
+
+if (!surface_exists(cloudSurface)) {
+	cloudSurface = surface_create(room_width, room_height);
+}
+
+surface_set_target(cloudSurface);
+	draw_clear_alpha(c_black, 0);
+	with (objCloud) {
+		draw_self();	
+	}
+surface_reset_target();
