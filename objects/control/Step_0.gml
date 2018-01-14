@@ -45,13 +45,15 @@ surface_set_target(gameSurface);
 			draw_sprite(sprExclamation, 0, x, y - 8);	
 		}
 	}
-	with (objChef) {
-		draw_sprite(sprFish, fishNeeded, x + 10, y - 24);
+	if (!control.gameWin && !control.gameStart) {
+		with (objChef) {
+			draw_sprite(sprFish, fishNeeded, x + 10, y - 24);
+		}
+		draw_set_font(fntScore);
+		draw_set_halign(fa_center);
+		draw_set_alpha(1);
+		draw_set_valign(fa_middle);
+		draw_set_color(c_white);
+		draw_text(objChef.x, objChef.y - 40, string(fishCount) + " / 6");
 	}
-	draw_set_font(fntScore);
-	draw_set_halign(fa_center);
-	draw_set_alpha(1);
-	draw_set_valign(fa_middle);
-	draw_set_color(c_white);
-	draw_text(objChef.x, objChef.y - 40, string(fishCount));
 surface_reset_target();

@@ -7,3 +7,5 @@ outlineHeight = shader_get_uniform(shdOutline, "outlineHeight");
 outlineDepth = shader_get_uniform(shdOutline, "outlineDepth");
 
 fishCount = 0;
+gameStart = true;
+gameWin = false;

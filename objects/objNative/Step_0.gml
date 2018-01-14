@@ -7,12 +7,13 @@ if (timer <= 0) {
 
 timer -= 1;
 
-if (distance_to_object(objPlayer) < 64) {
+
+if (distance_to_object(objPlayer) < 24) {
+	targetSpeed = -1;
+} else if (distance_to_object(objPlayer) < 64) {
 	targetDirection = point_direction(x, y, objPlayer.x, objPlayer.y);
 	targetSpeed = 0;
-}
-
-if (point_distance(x, y, xorigin, yorigin) > patrolRange) {
+} else if (point_distance(x, y, xorigin, yorigin) > patrolRange) {
 	targetDirection = point_direction(x, y, xorigin, yorigin);
 	targetSpeed = 0.5;
 }
