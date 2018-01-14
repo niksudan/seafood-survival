@@ -1,5 +1,3 @@
-// Rendering
-
 if (!surface_exists(oceanSurface)) {
 	oceanSurface = surface_create(room_width, room_height);
 }
@@ -29,16 +27,31 @@ surface_set_target(gameSurface);
 	with (scenery) {
 		draw_self();
 	}
-	if (instance_exists(objBobber)) {
-		draw_set_color(c_black);
-		draw_line(objBobber.x, objBobber.y, objPlayer.rodX, objPlayer.rodY);
-	}
 	with (person) {
 		person_render();
+	}
+	with (effect) {
+		draw_self();
+	}
+	if (instance_exists(objBobber)) {
+		with (objBobber) {
+			draw_self();	
+		}
+		draw_set_color(c_black);
+		draw_line(objBobber.x, objBobber.y, objPlayer.rodX, objPlayer.rodY);
 	}
 	with (objFishPatch) {
 		if (isBiting) {
 			draw_sprite(sprExclamation, 0, x, y - 8);	
 		}
 	}
+	with (objChef) {
+		draw_sprite(sprFish, fishNeeded, x + 10, y - 24);
+	}
+	draw_set_font(fntScore);
+	draw_set_halign(fa_center);
+	draw_set_alpha(1);
+	draw_set_valign(fa_middle);
+	draw_set_color(c_white);
+	draw_text(objChef.x, objChef.y - 40, string(fishCount));
 surface_reset_target();

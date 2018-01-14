@@ -1,7 +1,8 @@
 if (isReeling) {
 	xTarget = objPlayer.rodX;
 	yTarget = objPlayer.rodY;
-	if (place_meeting(x, y, objWaterZone) && didSplash && !didSplashOut) {
+	if ((place_meeting(x, y, objWaterZone) || place_meeting(x, y, objPot))
+		&& didSplash && !didSplashOut) {
 		instance_create_depth(x, y, -1, objSplashBig);
 		didSplashOut = true;
 	}
@@ -11,7 +12,7 @@ if (isReeling) {
 	}
 } else {
 	if (distance_to_point(xTarget, yTarget) <= 2 && !didSplash) {
-		if (place_meeting(xTarget, yTarget, objWaterZone)) {
+		if (place_meeting(xTarget, yTarget, objWaterZone) || place_meeting(xTarget, yTarget, objPot)) {
 			didSplash = true;
 			instance_create_depth(xTarget, yTarget, -1, objSplashBig);
 		} else {

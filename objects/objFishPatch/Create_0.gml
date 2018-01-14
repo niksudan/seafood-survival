@@ -1,7 +1,7 @@
 timer = 0;
 biteDelay = 120;
 biteTimer = biteDelay;
-numberOfBites = 2 + choose(irandom(2), irandom(3), irandom(5));
+numberOfBites = 1 + choose(irandom(2), irandom(3));
 
 radius = 32;
 targetRadius = radius;
