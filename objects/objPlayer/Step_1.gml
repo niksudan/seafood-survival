@@ -16,10 +16,15 @@ if (keyboard_check(vk_up) || keyboard_check(ord("W"))) {
 	yDir = 0;	
 }
 
-// Casting
 if (didClick) {
 	didClick = false;
-	if (!isUsingRod) {
+	
+	// Drop fish
+	if (hasFish) {
+		hasFish = false;
+		
+	// Cast
+	} else if (!isUsingRod) {
 		isUsingRod = true;
 		p_bodyDir += choose(1, -1) * random_range(10, 20);
 		with (objBobber) {

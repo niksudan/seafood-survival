@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "2756bc58-e9c4-4ac0-96bc-14e7c381ef64",
+            "Value": {
+                "id": "a031898b-34fc-4a20-916e-03d3b7d258cd",
+                "resourcePath": "objects\\objFish\\objFish.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "289ffc93-6251-46f4-81ee-3a67ea922ed1",
             "Value": {
                 "id": "ddcf933f-189e-4257-84bf-a6d90ffca02a",

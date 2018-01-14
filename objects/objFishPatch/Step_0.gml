@@ -64,6 +64,8 @@ if (isSpooked) {
 		// Caught the fish!
 		if (isBiting) {
 			instance_create_depth(x, y, -1, objSplashBig);
+			instance_create_depth(x, y, -1, objFish);
+			objPlayer.hasFish = true;
 			instance_destroy();
 			
 		// Pulled too early

@@ -5,7 +5,7 @@ if (isReeling) {
 		instance_create_depth(x, y, -1, objSplashBig);
 		didSplashOut = true;
 	}
-	if (distance_to_point(xTarget, yTarget) <= 16) {
+	if (distance_to_point(xTarget, yTarget) <= 16 && !objPlayer.hasFish) {
 		objPlayer.isUsingRod = false;
 		instance_destroy();	
 	}

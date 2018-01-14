@@ -6,6 +6,7 @@ maxSpeed = 2;
 acceleration = 0.3;
 didClick = false;
 isUsingRod = false;
+hasFish = false;
 
 person_define(1, sprRod);
 
