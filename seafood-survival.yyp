@@ -383,6 +383,14 @@
             }
         },
         {
+            "Key": "a8414ec7-d22f-4868-9fcf-5a98b8f61d1a",
+            "Value": {
+                "id": "36941414-e830-4e7b-a73b-f7f560f282d1",
+                "resourcePath": "objects\\objNative\\objNative.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "c54eacb6-9029-427b-9618-5a7b36bcc7d5",
