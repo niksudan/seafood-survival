@@ -399,6 +399,14 @@
             }
         },
         {
+            "Key": "862f3230-78ce-4ba8-a115-c1e07ac9df17",
+            "Value": {
+                "id": "ee948cd9-4eaf-4f70-b598-f6496c408fc2",
+                "resourcePath": "sounds\\sndGrass\\sndGrass.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "8645c4cc-00d5-4a5c-98ba-fe3f53c392c8",
             "Value": {
                 "id": "6ec5a744-e401-4043-aff5-ab904847498a",
