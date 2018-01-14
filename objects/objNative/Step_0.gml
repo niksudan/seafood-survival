@@ -1,5 +1,5 @@
 if (timer <= 0) {
-	timer = irandom_range(10, 30);
+	timer = irandom_range(60, 90);
 	targetRadius = 64 + irandom(64);
 	targetDirection = random(360);
 	targetSpeed = choose(0, random_range(0.3, 0.5));
