@@ -9,3 +9,5 @@ outlineDepth = shader_get_uniform(shdOutline, "outlineDepth");
 fishCount = 0;
 gameStart = true;
 gameWin = false;
+
+audio_play_sound(sndMusic, 0, true);

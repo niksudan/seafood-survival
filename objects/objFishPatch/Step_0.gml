@@ -22,6 +22,7 @@ if (timer <= 0) {
 if (canBite) {
 	biteTimer -= 1;
 	if (biteTimer <= 0) {
+		audio_play_sound(sndBite, 0, false);
 		biteTimer = biteDelay;
 		numberOfBites -= 1;
 		jolt_rod();
@@ -29,11 +30,13 @@ if (canBite) {
 		// Left it too long
 		if (isBiting) {
 			isSpooked = true;
+			audio_play_sound(sndSpook, 0, false);
 		}
 
 		if (numberOfBites <= 0) {
 			instance_create_depth(x, y, -1, objSplashBig);
 			isBiting = true;
+			audio_play_sound(sndExclamation, 0, false);
 		} else {
 			instance_create_depth(x, y, -1, objSplashSmall);	
 			speed -= 0.1;
@@ -73,6 +76,7 @@ if (isSpooked) {
 		// Pulled too early
 		} else {
 			isSpooked = true;
+			audio_play_sound(sndSpook, 0, false);
 		}
 	}
 }

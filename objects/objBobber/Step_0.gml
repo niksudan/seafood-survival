@@ -3,6 +3,7 @@ if (isReeling) {
 	yTarget = objPlayer.rodY;
 	if ((place_meeting(x, y, objWaterZone) || place_meeting(x, y, objPot))
 		&& didSplash && !didSplashOut) {
+		audio_play_sound(sndCatch, 0, false);
 		instance_create_depth(x, y, -1, objSplashBig);
 		didSplashOut = true;
 	}
