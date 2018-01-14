@@ -1,3 +1,4 @@
+oceanSurface = surface_create(room_width, room_height);
 islandSurface = surface_create(room_width, room_height);
 gameSurface = surface_create(room_width, room_height);
 
