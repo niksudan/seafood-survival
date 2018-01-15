@@ -18,7 +18,7 @@ if (instance_exists(objBobber) && !isDropped) {
 		instance_destroy();
 		
 	// Put it in the pot for yum yums :)
-	} else if (place_meeting(x, y, objPot)) {
+	} else if (distance_to_object(objPot) < 16) {
 		audio_play_sound(sndSplash, 0, false);
 		instance_create_depth(objPot.x, objPot.y, -1, objSplashBig);
 		put_fish_in_pot(image_index);
