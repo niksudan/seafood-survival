@@ -18,10 +18,11 @@ if (distance_to_object(objPlayer) < 24) {
 	targetSpeed = 0.5;
 }
 
-if (distance_to_object(objPlayer) < radius && objPlayer.hasFish) {
-	targetDirection = point_direction(x, y, objBobber.x, objBobber.y);
-	targetSpeed = 1;
-	if (distance_to_object(objBobber) < 2) {
+if (instance_exists(objFish) && distance_to_object(instance_nearest(x, y, objFish)) < radius) {
+	var fish = instance_nearest(x, y, objFish);
+	targetDirection = point_direction(x, y, fish.x, fish.y);
+	targetSpeed = 0.75;
+	if (instance_exists(objBobber) && distance_to_object(objBobber) < 2) {
 		objPlayer.hasFish = false;
 		jolt_rod();
 	}
