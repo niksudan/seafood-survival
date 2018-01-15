@@ -24,6 +24,12 @@ if (instance_exists(objBobber) && !isDropped) {
 		put_fish_in_pot(image_index);
 		instance_destroy();
 		
+	// Get eaten by native :(
+	} else if (place_meeting(x, y, objNative)) {
+		instance_create_depth(x, y, -1, objSplashBig);
+		audio_play_sound(sndDrop, 0, false);	
+		instance_destroy();
+		
 	// DROP ON THE GROUND AND LET THE POOR THING SUFFOCATE
 	} else {
 		if (health == 100) {
