@@ -5,6 +5,7 @@ n = 0;
 x = objBobber.x;
 y = objBobber.y;
 isDropped = false;
+panicDirection = 0;
 health = 100;
 
 // Rare feeshy
