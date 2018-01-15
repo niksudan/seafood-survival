@@ -19,9 +19,7 @@ shader_set_uniform_f(outlineDepth, 3);
 draw_surface(gameSurface, 0, 0);
 shader_reset();
 
-draw_set_alpha(0.2);
-draw_surface(cloudSurface, 0, 0);
-draw_set_alpha(1);
+draw_surface_ext(cloudSurface, 0, 0, 1, 1, 0, c_white, 0.2);
 
 if (gameWin || gameStart) {
 	draw_set_alpha(0.75);
