@@ -55,6 +55,5 @@ if (gameWin || gameStart) {
 		draw_text(objPlayer.x, objPlayer.y - 64, "SEAFOOD SURVIVAL");
 	}
 }
-if (!objPlayer.isUsingRod) {
-	draw_sprite(sprCursor, 0, mouse_x, mouse_y);
-}
+
+draw_sprite(sprCursor, 0, mouse_x, mouse_y);
