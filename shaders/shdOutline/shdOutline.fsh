@@ -6,6 +6,7 @@ varying vec4 v_vColour;
 uniform float outlineWidth;
 uniform float outlineHeight;
 uniform float outlineDepth;
+const float MAX_DEPTH = 10.0;
 
 void main()
 {
@@ -20,7 +21,10 @@ void main()
 	alpha += ceil( texture2D( gm_BaseTexture, v_vTexcoord - offsetX ).a );
 	alpha += ceil( texture2D( gm_BaseTexture, v_vTexcoord + offsetY ).a );
 
-	for (float i = 0.0; i < outlineDepth; i += 1.0) {
+	for ( float i = 0.0; i < MAX_DEPTH; i += 1.0 ) {
+		if ( i >= outlineDepth ) {
+			break;
+		}
 		alpha += ceil( texture2D( gm_BaseTexture, v_vTexcoord - (offsetY * i) ).a );
 	}
 
